@@ -1,0 +1,1 @@
+Insert in this file the parameter of the ECC private key for the second card

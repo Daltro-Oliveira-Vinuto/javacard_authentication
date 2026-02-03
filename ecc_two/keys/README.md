@@ -1,0 +1,1 @@
+Insert in this folder the public and private key for the second card

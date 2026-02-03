@@ -1,9 +1,11 @@
 /venv
 
-ecc/keys/*
-ecc/parameters/*
+ecc/keys/*.pem
+ecc/parameters/*.pem
 
-ecc_two/keys/*
-ecc_two/parameters/*
+ecc_two/keys/*.pem
+ecc_two/parameters/*.pem
+
+
 
 
