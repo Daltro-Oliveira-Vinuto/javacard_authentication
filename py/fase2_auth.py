@@ -6,14 +6,23 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives import hashes
 
+USER_NAME = os.getenv("USER")
+
+
 # --- CONFIGURAÇÃO ---
-GP_JAR = os.path.expanduser("~/gp_v25.10.20/gp.jar") 
+GP_JAR = os.path.expanduser(f"/home/{USER_NAME}/System_Software/gp_v25.10.20/gp.jar") 
+#print(f"{GP_JAR}")
+
 AID = "A00000006203010C01"
 JAVA11_BIN = "/opt/java/jdk-11/bin/java"
 
 # Caminhos das chaves OpenSSL
-PRIV_KEY_FILE = "./keys/ecc_private.pem"
-PUB_KEY_FILE  = "./keys/ecc_public.pem"
+PRIV_KEY_FILE = "ecc/keys/ecc_private.pem"
+PUB_KEY_FILE  = "ecc/keys/ecc_public.pem"
+
+print(f"Private key file path: {PRIV_KEY_FILE}")
+print(f"Public key file path: {PUB_KEY_FILE}")
+
 
 def run_gp(apdus):
     args = " ".join([f"-a {x}" for x in apdus])

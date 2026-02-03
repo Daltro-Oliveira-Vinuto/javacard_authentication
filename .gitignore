@@ -1,6 +1,11 @@
 /venv
-/keys/*
-/keys_2/*
-/keys_1/*
-/bin/*
+ecc_two/keys/*
+ecc_two/parameters/*
+ecc/keys/*
+ecc/parameters/*
+bin/*
+bin/card/*
+bin/card/*.class
+bin/card/*.cap
+
 

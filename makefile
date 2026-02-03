@@ -1,9 +1,9 @@
 #Author: Daltro Oliveira Vinuto Email: daltroov777@gmail.com
 
-all: cls compile create_cap load_cap 
+all: cls compile create_cap 
 
 USER_NAME = $(USER)
-JAVA_CLASS := HelloWorld#   AuthApplet
+JAVA_CLASS := AuthApplet
 SRC := src/card
 SRC_FILE := $(SRC)/$(JAVA_CLASS)
 JAVA_SRC_FILE := $(SRC_FILE).java
@@ -14,7 +14,6 @@ CONTROLLER_SRC :=./py/fase2_auth
 
 APDU_1 := 00A4040009A00000006203010C01
 APDU_2 := 80010000
-
 
 CAP_INSTANCE := A00000006203010C01
 CAP_PACKAGE := A00000006203010C
@@ -46,7 +45,6 @@ compile:
 	$(JAVA_SRC_FILE)
 	@echo "=============================> Compilation finished, file *.class created\n"
 
-
 create_cap: 
 	@echo "============================> cap creation started"
 	$(JAVA8_BIN)/java -cp \
@@ -63,7 +61,6 @@ load_cap:
 	@echo "============================> loading cap started"
 	$(RUN_GP) -install $(TARGET_FOLDER)/$(CARD)/$(JAVACARD)/$(CARD).cap
 	@echo "============================> cap loaded\n"
-
 
 delete_cap:
 	rm -rf bin/*
