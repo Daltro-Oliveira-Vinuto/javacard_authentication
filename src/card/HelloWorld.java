@@ -6,7 +6,7 @@ public class HelloWorld extends Applet {
     // Definimos uma instrução para pedir o texto (0x01)
     private static final byte INS_SAY_HELLO = (byte) 0x01;
     private static final byte[] helloText = {
-        '0', 'a', 'A', 'z', 'a', 'a', 'a', 'A', 'A', '1'
+        '0', '1', '2', '3', 'A', 'B', 'C', 'a', 'b', 'c'
     };
 
     public static void install(byte[] bArray, short bOffset, byte bLength) {
